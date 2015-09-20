@@ -1,0 +1,295 @@
+
+
+#banner {
+	background-color: #5882FA;
+	border-bottom: black 1px solid; 
+	margin: -8px 0px 0px -9px;
+	padding-left: 10px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20pt;
+	font-family: 'Varela', sans-serif;
+	color: white;
+    box-shadow: 0px 2px 5px #888888;
+    position: fixed;
+    font-family: 'Droid Sans', sans-serif;
+    z-index: 1;
+}
+
+#bannername {
+	float:left;
+	text-align: left;
+	padding-left: 20px;
+
+}
+
+#bannernav {
+	float: right;
+	margin-right: 11px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#bannernav li {
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 13pt;
+	vertical-align: middle;
+	padding: 0px 5px 10px 5px;
+	margin-bottom: 0px;
+}
+
+
+
+.verticalspacer {
+	height: 18pt;
+	width: 1pt;
+	display: block;
+}
+
+
+.topic {
+	font-size: 30pt;
+	margin-left: 20pt;
+	margin-right: 20pt;
+	font-family: 'Droid Sans', sans-serif;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+.centerDiv {
+	width: 50%;
+	margin: 0 auto;
+}
+
+#portrait {
+	width: 300;
+	height: 300;
+}
+
+
+.content {	
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+
+}
+
+#aboutme {
+	width: 64%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+
+.introduction {
+	text-align: left;
+	margin-bottom: 5pt;
+	padding-left: 10pt;
+}
+
+#floatbar {
+	float: center;
+	background-color: #5882FA;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 1;
+}
+
+#floatbar_content {
+	background-color: #5882FA;
+	border-bottom: black 1px solid; 
+	
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	font-size: 17pt;
+	font-family: 'Varela', sans-serif;
+	color: white;
+    box-shadow: 0px 2px 5px #888888;
+
+}
+
+ul {
+	width: 100%;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-right: 10px;
+	padding: 0px 0px 0px 0px;
+}
+
+li {
+	/*display: inline-block;
+	text-align: center;*/
+	z-index: 1;
+}
+
+
+
+#bannernav a {
+	color: white;
+}
+#lastcontainer {
+	margin-bottom: 0px;
+}
+
+.container {
+	margin-bottom: 350px;
+	text-align: center;
+	font-family: 'Varela', sans-serif;
+	position: relative;
+}
+
+#ultimatecontainer {
+	/*border: 1px solid blue;*/
+	width: 1050px; 
+	margin-left: auto; 
+	margin-right: auto;
+	margin-bottom: -8px;
+}
+
+
+#background {
+
+	background-color: white;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	margin: -8px -9px 0px -8px;
+	position: fixed;
+}
+
+
+.mytable {
+	border-spacing: 30px 5px;
+	width: 100%;
+	table-layout: fixed;
+
+}
+
+.tableheader td {
+	font-size: 25px;
+padding-bottom: 20px;
+	text-align: center;
+}
+
+.tabledescriptions td {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.tableimages td {
+	text-align: center;
+}
+
+.contacttable {
+	border-spacing: 10px 5px;
+	width: auto;
+	margin: 0 auto !important;
+}
+
+
+.contactimage {
+	text-align: right;
+
+}
+
+#containercontacttable {
+	width: 100%;
+	table-layout: fixed;
+	text-decoration: none;
+
+}
+
+.containercontacttablemodule {
+	vertical-align: top;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#clearlink {
+	text-decoration: underline;
+	color: white;
+}
+
+.displaylink {
+	text-decoration: underline;
+	color: black;
+}
+
+
+
+.skillsbullets {
+	vertical-align: top;
+
+}
+
+.skillsbullets td {
+	padding-top: 30px;
+}
+.skillsbullets li {
+	list-style-type: disc;
+	margin-left: 1.5em;
+}
+
+
+#footer {
+	/*Coloring and font*/
+	background-color: #5882FA;
+	border-top: black 1px solid; 
+	font-size: 9pt;
+	font-family: 'Varela', sans-serif;
+	color: white;
+    box-shadow: 0px 2px 5px #888888;`
+    font-family: 'Droid Sans', sans-serif;
+
+
+   /*Spacing*/
+	margin: 100px 0px 0px -8px;
+	position: absolute;
+	padding-top: 30px;
+	width: 100%;
+
+}
+
+#footer div {
+	margin:0;
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+
+	#bannernav li {
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 20pt ;
+		vertical-align: middle;
+		padding: 0px 5px 10px 5px;
+		margin-bottom: 0px;
+	}
+
+
+
+
+}
+
+*/
