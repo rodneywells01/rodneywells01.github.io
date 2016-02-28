@@ -1,0 +1,15 @@
+{
+  "name": "new rodneywells.com",
+  "description": "This is my new portfolio website bowerjson file",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Rodney Wells"
+  ],
+  "license": "MIT",
+  "homepage": "www.rodneywells.com",
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "polymer": "Polymer/polymer#1.2.0"
+  }
+}

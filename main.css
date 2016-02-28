@@ -145,7 +145,7 @@ li {
 }
 
 .container {
-	margin-bottom: 350px;
+	margin-bottom: 250px;
 	text-align: center;
 	font-family: 'Varela', sans-serif;
 	position: relative;
@@ -154,6 +154,7 @@ li {
 #ultimatecontainer {
 	/*border: 1px solid blue;*/
 	width: 1050px; 
+	padding-top: 200px;
 	margin-left: auto; 
 	margin-right: auto;
 	margin-bottom: -8px;
