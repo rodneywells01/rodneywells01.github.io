@@ -1,0 +1,44 @@
+.full {
+	width: 100%;
+}
+
+.half {
+	width: 50%;
+}
+
+.wide {
+	width: 70%;
+}
+
+.thin {
+	width: 30%;
+}
+
+.tall {
+	height: 28.57% !important;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+
+.collageblock {
+	box-sizing: border-box;
+	height: 14.28%;
+	border: 3px solid black;
+	display: inline-block; /* Weird css hack */
+	vertical-align: top;
+	position: relative;
+	font-size: 20px;
+	word-wrap: break-word;
+}
+
+.collageinner {
+	width: 70%;
+	text-align: center;
+}
