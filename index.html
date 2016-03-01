@@ -4,12 +4,25 @@
 	<title>Rodney Wells Official Website</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="collage.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Raleway|Pontano+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="attempt.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="bower_components/Matter/build/matter.min.js"></script>
+	<!-- <script type="text/javascript" src="matter_physics.js"></script> -->
+	<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+	<link rel="import" href="bower_components/google-map/google-map.html">
+	<link rel="import" href="bower_components/google-map/google-map-marker.html">
+	<link rel="import" href="bower_components/google-map/google-map-poly.html">
+	<link rel="import" href="bower_components/google-map/google-map-directions.html">
+
+	<!-- Polymer libraries -->
+	<link rel="import" href="bower_components/polymer/polymer.html">
 </head>
 <body>
 	<div id="navbar">
+		<div id="mynamecontainer"><div class="absolutecenter">Rodney Wells</div></div>
 		<ul>
 			<li class="navbutton"><div class="absolutecenter">About</div></li>
 			<li class="navbutton"><div class="absolutecenter">Projects</div></li>
@@ -18,39 +31,127 @@
 			<li class="navbutton"><div class="absolutecenter">Contact</div></li>
 		</ul>
 	</div>
-	<div class="fullscreencard" style="padding-top: 0;">
-		<div class="fullscreencardcontainer" style="padding-top: 74px;">
-			<div class="majoritycontainer" style="height: 106%;">
-				<div id="myname">Rodney Wells</div>
-
-				<img src="rodneypicture.png" id="rodneypic"/>
-			</div>	 
-			<div class="minoritycontainer" style="height: 106%; background-color: aliceblue; position: absolute;">
-				<div class="collageblock full left"><div class="collageinner absolutecenter"><h2>At A Glance</h2></div></div>
-				<div class="collageblock wide left"><div class="collageinner absolutecenter">3 Years of Development Education</div></div>
-				<div class="collageblock thin right"><div class="collageinner absolutecenter">Pursuing Degree</div></div>
-				<div class="collageblock half left"><div class="collageinner absolutecenter">Web Dev Experience</div></div>
-				<div class="collageblock half right"><div class="collageinner absolutecenter">Game Development Experience</div></div>
-				<div class="collageblock thin left"><div class="collageinner absolutecenter">Gamer</div></div>
-				<div class="collageblock wide right"><div class="collageinner absolutecenter">Avid Runner</div></div>
-				<div class="collageblock wide"><div class="collageinner absolutecenter">Algorithmic Comprehension</div></div>
-				<div class="collageblock thin"><div class="collageinner absolutecenter">Racquetball Player</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Politically Aware</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Fun</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Gamer</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Gamer</div></div>
-
-
-			</div>
-		</div>
+	<div id="navbarbuffer"></div>
+	<div class="autocardcontainer back" style="padding-top: 0;">
+		<div class="innercard">
+			<div id="introcontainer"><div id="intro" class="absolutecenter">My Name Is <br/> Rodney Wells. <br/> I Try To Build Cool Stuff!</div></div>			
+			<div id="rodneypiccontainer"><img src="rodneypicture.png" id="rodneypic" class="absolutecenter"/></div>	
+		</div>		
 	</div>
 	
 	<div class="fullscreencard white">
 		<div class="fullscreencardcontainer">
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			<div class="innercard">
+				<div class="title"><h1>What's Your Deal, Anyways?</h1></div>
+				<!-- <canvas id="skillcanvas"></canvas> -->
+				<ul class="displaycelllist">
+					<li><div class="displaycell">
+						<div class="displaycellicon">
+							<img src="skills/pennstate.png">
+						</div>
+						<div class="displaycelltitle">Pursuing Penn State Degree</div>
+						<div class="displaycellbody">Body Information</div>
+					</div></li>
+					<li><div class="displaycell">
+						<div class="displaycellicon">
+							<img src="">
+						</div>
+						<div class="displaycelltitle">Computer Scientist</div>
+						<div class="displaycellbody">Body Information</div>
+					</div></li>
+					<li><div class="displaycell">
+						<div class="displaycellicon">
+							<img src=""></div>
+						<div class="displaycelltitle">Web Development Experience</div>
+						<div class="displaycellbody">Body Information</div>
+					</div></li>
+					<li><div class="displaycell">
+						<div class="displaycellicon">
+							<img src="">
+						</div>
+						<div class="displaycelltitle"></div>
+						<div class="displaycellbody">Body Information</div>
+					</div></li>
+				</ul>
 
-
+			</div>			
 		</div>		
+	</div>
+	<div class="fullscreencard back">
+		<div class="fullscreencardcontainer ">
+			<div class="innercard">
+				<div class="title"><h1>Let's Get in Contact</h1></div>
+				<div id="mapcontainer">
+					<style>
+					  google-map {
+					    height: 500px;
+					  }
+					</style>
+					<google-map latitude="42.129224" longitude="-80.085059">
+						<google-map-marker latitude="42.129224" longitude="-80.085059"
+                     title="My Hometown!" draggable="false">
+					</google-map>
+				</div>
+				<div id="contactcontainer">
+					<ul>
+						<li>
+							<div class="contactrow">
+								<div class="contacticon">
+									<img src="contacticons/facebookedited.png"></div>
+								<div class="contacttextcontainer">
+									<div class="verticalcenter">LinkedIn</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="contactrow">
+								<div class="contacticon">
+									<img src="contacticons/facebookedited.png"></div>
+								<div class="contacttextcontainer">
+									<div class="verticalcenter">GitHub</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="contactrow">
+								<div class="contacticon">
+									<img src="contacticons/facebookedited.png"></div>
+								<div class="contacttextcontainer">
+									<div class="verticalcenter">Facebook</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="contactrow">
+								<div class="contacticon">
+									<img src="contacticons/facebookedited.png"></div>
+								<div class="contacttextcontainer">
+									<div class="verticalcenter">Twitter</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="contactrow">
+								<div class="contacticon">
+									<img src="contacticons/facebookedited.png"></div>
+								<div class="contacttextcontainer">
+									<div class="verticalcenter">rodneywells01@gmail.com</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="contactrow">
+								<div class="contacticon">
+									<img src="contacticons/facebookedited.png"></div>
+								<div class="contacttextcontainer">
+									<div class="verticalcenter">Resume Download</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
