@@ -1,0 +1,60 @@
+/* CONTACT SECTION */
+#mapcontainer {
+	width: 40%;	
+	border: 1px solid black;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+#contactcontainer {
+	float: right;
+	width: 50%;
+	/*padding: 20px;*/
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	/*height: 100%;*/
+	vertical-align: top;
+}
+
+#contactcontainer li {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+#contactcontainer div {
+	display: inline-block;
+}
+
+.contactrow {
+	height: 60px;
+}
+
+#contactcontainer img {
+	width: 60px;
+	height: 60px;
+}
+
+.contacttextcontainer {
+	height: 100%;
+	position: relative;
+	vertical-align: top;
+}
+
+.contacttextcontainer {
+	display: inline-block;
+	text-align: center;
+	/*width: 200px;*/
+}
+
+.contacttextcontainer div {
+	width: 200px;
+}
+
+
+#finalnote {
+	text-align: center;
+	position: relative;
+	vertical-align: bottom;
+}

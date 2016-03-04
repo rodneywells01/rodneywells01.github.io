@@ -14,17 +14,12 @@ body {
 	font-family: 'Pontano Sans', sans-serif;
 }
 
-#navbarbuffer {
-	height: 60px;
-	display: block;
-}
-
-.autocardcontainer {
+#topcardcontainer {
 	width: 100%;
 	height: 400px;
 	margin: 0;
 	box-sizing: border-box;
-	background-color: #F0EAD6;	
+	/*background-color: #F0EAD6;	*/
 	position: relative;
 	padding-top: calc(3% + 30px); /* This must be equal to degree skew. */
 }
@@ -90,20 +85,6 @@ body {
 	text-align: center;
 }
 
-#navbar {
-	height: 60px;
-	background-color: black;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	box-sizing: border-box;
-	/*border-bottom: 2px solid grey;*/
-	z-index: 1;
-	color: white;
-
-}
-
 #mynamecontainer {
 	width: 30%;
 	height: 100%;
@@ -111,6 +92,8 @@ body {
 	box-sizing: border-box;
 	display: inline-block;
 	font-size: 2em;
+	z-index: 2;
+	background-color: black;
 }
 
 #mynamecontainer div {
@@ -118,31 +101,7 @@ body {
 	text-align: center;
 }
 
-#navbar ul {
-	display: inline-block;
-	float: right;
-	width: 70%;
-	right: 0;
-	/*background-color: green;*/
-	height: 100%;
-	margin: auto 0 auto auto;
-	padding:0;
-	font-size: 0;
-}
 
-#navbar li {
-	list-style-type: none;
-	display: inline-block;
-	position: relative;
-	box-sizing: border-box;
-	width: 20%;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	background-color: grey;	
-	font-size: 20px;
-	border: 1px solid black;
-}
 
 .white {
 	background-color: white;
@@ -177,62 +136,14 @@ body {
 	height: 100%;
 }
 
-.displaycelllist {
-	width: 100%;
-	border: 1px solid black;
-	box-sizing: border-box;
-	padding: 0;
-
-	display: table;
-}
-
-.displaycelllist li {
-	width: 230px;
-	box-sizing: border-box;
-	position: relative;
-	margin: 0 auto;
-	display: table-cell;
-	padding: 0;
-	height: 100%;
-}
-
-.displaycell {
-	border: 1px solid red;
-	padding: 10px;
-	width: 200px;
-	height: 300px;
-}
-
-.displaycelltitle {
-	border: 1px solid orange;
-	padding: 5px;
-	margin-top: 20px;
-	text-align: center;
-}
-
-.displaycellbody {
-	border: 1px solid grey;
-	padding: 5px;
-	margin-top: 20px;
-}
-
-.displaycellicon {
-	border: 1px solid green;
-	padding: 5px;
-}
-
-.displaycellicon img {
-	width: 200px;
-	height: auto;
-}
-
 /* TODO BODY FOR EACH SECTION*/
 .title {
 	margin-bottom: 100px;
 }
 
 
-@media (max-width: 900px) {
+
+@media (max-width: 1100px) {
 	#rodneypiccontainer {
 		display: none;
 	}
@@ -245,8 +156,6 @@ body {
 	#intro {
 		width: 100%;
 		position: absolute;
-		/*display: block;*/
-		/*position: relative;*/
 	}
 
 	/* This may need to be on smaller devices only */
@@ -257,59 +166,3 @@ body {
 }
 
 
-/* CONTACT SECTION */
-
-#mapcontainer {
-	width: 40%;
-	/*padding: 20px;*/
-	border: 1px solid black;
-	box-sizing: border-box;
-	display: inline-block;
-}
-
-
-#contactcontainer {
-	float: right;
-	width: 50%;
-	/*padding: 20px;*/
-	box-sizing: border-box;
-	position: relative;
-	display: inline-block;
-	/*height: 100%;*/
-	vertical-align: top;
-}
-
-#contactcontainer li {
-	display: block;
-	margin-bottom: 5px;
-	font-size: 20px;
-}
-
-#contactcontainer div {
-	display: inline-block;
-}
-
-.contactrow {
-	height: 60px;
-}
-
-#contactcontainer img {
-	width: 60px;
-	height: 60px;
-}
-
-.contacttextcontainer {
-	height: 100%;
-	position: relative;
-	vertical-align: top;
-}
-
-.contacttextcontainer {
-	display: inline-block;
-	text-align: center;
-	/*width: 200px;*/
-}
-
-.contacttextcontainer div {
-	width: 200px;
-}
