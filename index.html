@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/about.css">
 	<link rel="stylesheet" type="text/css" href="styles/header.css">
 	<link rel="stylesheet" type="text/css" href="styles/contact.css">
-
+	<link rel="stylesheet" type="text/css" href="styles/experience.css">
 	<!-- Scripts -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="attempt.js"></script>
@@ -96,7 +96,61 @@
 		<div class="fullscreencardcontainer">
 			<div class="innercard">
 				<div class="title"><h1>Check Out What I've Been Up To</h1></div>
-				<div class="fullscreencardbody">				
+				<div class="fullscreencardbody">	
+					<ul class="displaycelllist smallcells">
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj1');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" src="skills/nickcoloreditoptimized4.png" style="width: 120px; height: 120px;">
+								</div>
+								<div class="displaycelltitle">NicholasNasibyan.com</div>
+								
+							</div></li>
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj2');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" src="projects/javapaint.png">
+								</div>
+								<div class="displaycelltitle">Java Paint Application</div>
+							</div></li>
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj3');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" src="projects/javaim.png" style="width: 100px; height: 100px;"></div>
+								<div class="displaycelltitle">Java IM Messenger</div>
+							</div></li>
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj4');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" style="width: 170px; height: 100px;" src="projects/marblerun.png">
+								</div>
+								<div class="displaycelltitle">Marble Run</div>
+								
+							</div></li>
+					</ul>
+					<ul class="displaycelllist smallcells">
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj5');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="projects/winterwonderland.png" style="width: 170px; height: 100px;">
+							</div>
+							<div class="displaycelltitle">Unity Technical Demonstration - WinterWonderland</div>
+							
+						</div></li>
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj6');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="projects/consolesolitaire.png" style="width: 120px; height: 120px;">
+							</div>
+							<div class="displaycelltitle">C++ Console Solitaire</div>
+						</div></li>
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj7');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="rodneypicture.png" style="width: 100px; height: 100px;"></div>
+							<div class="displaycelltitle">RodneyWells.com</div>							
+						</div></li>
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj8');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" style="width: 200px; height: 100px;" src="skills/github.png">
+							</div>
+							<div class="displaycelltitle">...and much, much more!</div>
+							
+						</div></li>
+					</ul>			
 				</div>
 			</div>			
 		</div>		
@@ -109,7 +163,42 @@
 		<div class="fullscreencardcontainer">
 			<div class="innercard">
 				<div class="title"><h1>Previous Experiences</h1></div>
-				<div class="fullscreencardbody">				
+				<div class="fullscreencardbody">	
+					<div class="displaycell widecard hvr-fade">
+						<div class="title">Penn State University - Teachers Assistant CMPSC 122</div>
+						<div class="contentwrap">
+							<div class="experienceimagewrap">
+								<img class="absolutecenter" src="skills/pennstatenewnofill.png" style="width: 100px; height: 100px;">
+							</div>
+							<div class="experiencedescription">
+								<div class="absolutecenter">Teachers assistant for an introductory Object Oriented design course. Worked with students to teach fundamental OOP concepts and applications, such as linked lists and trees, in C++. Graded weekly homework labs.</div>
+							</div>
+						</div>
+					</div>
+					<div class="displaycell widecard hvr-fade">
+						<div class="title">Software Developer Co-op - Rovisys Automation and Information Solutions</div>
+						<div class="contentwrap">
+							<div class="experienceimagewrap">
+								<img class="absolutecenter" src="experience/rovisys_logo.png" style="width: 170px; height: 60px;">
+							</div>
+							<div class="experiencedescription">
+								<div class="absolutecenter">Co-op with the Rovisys as a Software Developer. Developed interal web applications with modern technologies and frameworks, such as SASS, ASP.net, and AngularJS. Helped to research and implement a central login server implementation of IdentityServer v3. Used the version control system Team Foundation Server to document my work.</div>
+							</div>
+						</div>
+					</div>
+					<div class="displaycell widecard hvr-fade">
+						<div class="title">???</div>
+						<div class="contentwrap">
+							<div class="experienceimagewrap">
+								<img class="absolutecenter" src="experience/pirate.jpg" style="width: 100px; height: 100px;">
+							</div>
+							<div class="experiencedescription">
+								<div class="absolutecenter">Who knows where my next adventure will be? Pirateering in the Carribean? Outerspace exploration with NASA? 
+								<br/> <br/>
+								...or perhaps I'll stick with Software Engineering. And it could be with your company! Contact me below!</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>			
 		</div>		
@@ -206,10 +295,103 @@
 					
 				</div>
 				<div id="finalnote">
-					This website was created by Rodney Wells. Bower, Google Polymer, Jquery, MatterJS, Hover.css
+					This website was created by Rodney Wells. Bower, Google Polymer, Jquery, MatterJS, Hover.css. March 2016.
 				</div>	
 			</div>
 		</div>
 	</div>
+	</a>
+
+	<!-- Popup for various data -->
+	<div id="popupbackground">
+		<div id="popupinnercontainer">
+			<div id="popupclose" onclick="close_popup();">
+				<div class="hvr-fade"><div class="absolutecenter">X</div></div>	
+			</div>
+			<div id="popupinner">
+				<div class="title">The New NicholasNasibyan.com</div>
+				<div id="popupinnerbody">
+					<div id="popuppiccontainer">
+						<img class="absolutecenter" src="skills/nicholasnasibyanloggedout.png">
+					</div>
+					<div id="popupcontentcontainer">
+						<div id="popupcontent">
+							<div class="absolutecenter">Here's my description of what i've done!</div>
+						</div>
+						<div id="popupcontentlinkcontainer">
+							<div id="popuplink"><a href="http://www.nicholasnasibyan.com">www.nicholasnasibyan.com</div>
+							<div id="popupgithub">
+								<a href="https://github.com/rodneywells01">
+									<img style="width: 100px; height: 100px;" src="skills/github.png">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<!-- Hidden package deployment for project popups -->
+	<div style="display: none;">
+		<div id="proj1">
+			<div class="projecttitle">The New NicholasNasibyan.com</div>
+			<div class="projectdescription">Working directly with a client to create their vision was an experience that taught me a lot about web development. NicholasNasibyan.com is a product of a joint effort between myself and Nicholas Nasibyan of Erie, Pennsylvania, an up and coming professional pianist. Nick and I scraped various versions of the website, rolling back features and tweaking styles until we had the perfect final product. The website features a dynamic backend written in PHP with a login system the Nicholas can use to log in and edit his website in the browser, with a simple and user-friendly interface. The site also features an email system that allows Nicholas's fans to get in touch with him. 
+			</div>
+			<div class="projectimage">skills/nicholasnasibyanloggedout.png</div>
+			<div class="projectlink">www.nicholasnasibyan.com</div>
+			<div class="projectgithub">https://github.com/rodneywells01/NickWeb</div>
+		</div>
+		<div id="proj2">
+			<div class="projecttitle">Java PaintApplication</div>
+			<div class="projectdescription">A "Microsoft Paint" style appliction, which you can use to draw various shapes, as well as free draw, textures, and patterns. You can even save your work to your computer, or print it to a local printer to share with your friends!</div>
+			<div class="projectimage">projects/javapaint.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj3">
+			<div class="projecttitle">Java IM Application</div>
+			<div class="projectdescription">An asnynchronous Java application. Launch the server, and share the client file with your friends to chat!</div>
+			<div class="projectimage">projects/javaim.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj4">
+			<div class="projecttitle">Marble Run</div>
+			<div class="projectdescription">A game that I developed in Unity for a Game Development Final Project. Marble run uses the Unity Physics engine to create a fully featured marble rolling adventure. The game even has a reasonable difficulty curve, sound and visual effects, as well scaling game mechanics that culminate in an all inclusive final level.</div>
+			<div class="projectimage">projects/marblerun.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj5">
+			<div class="projecttitle">Unity Technical Demonstration - Winter Wonderland</div>
+			<div class="projectdescription">A small, playable demo of a man living inside of a snowy mountaintop. It was my goal to make this scene as aesthetically pleasing as possible, with particle effects and texturing that create a realistic, snowy environment.</div>
+			<div class="projectimage">projects/winterwonderland.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj6">
+			<div class="projecttitle">Solitaire - In the Console!</div>
+			<div class="projectdescription">This is one of my first projects, from Freshman year. A fully functioning and winnable version of Solitaire, entirely in the console. The program has a "gui" in the console, and even has a rudimentary help system for players to learn the game.</div>
+			<div class="projectimage">projects/consolesolitaire.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj7">
+			<div class="projecttitle">RodneyWells.com</div>
+			<div class="projectdescription">If you're reading this text, then you're looking at this project right now! This is the second version of my portfolio website, built using Jquery, Hover.css, bower, and Google Polymer.</div>
+			<div class="projectimage">N/A</div>
+			<div class="projectlink">www.rodneywells.com</div>
+			<div class="projectgithub">https://github.com/rodneywells01/My-Portfolio-Website</div>
+		</div>
+		<div id="proj8">
+			<div class="projecttitle">Check out my GitHub!</div>
+			<div class="projectdescription">I have a few other various projects on GitHub, so feel free to check out what i've been up to at the link below!</div>
+			<div class="projectimage">N/A</div>
+			<div class="projectlink">github.com/rodneywells01</div>
+			<div class="projectgithub">https://github.com/rodneywells01</div>
+		</div>
+	</div>
+
 </body>
 </html>

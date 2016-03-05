@@ -41,3 +41,28 @@ function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 }
+
+function display_popup(data) {	
+	// Fetch data
+	var data = $("#" + data); 
+	var title = data.children(".projecttitle").text();
+	var description = data.children(".projectdescription").text();
+	var image = data.children(".projectimage").text();
+	var link = data.children(".projectlink").text();
+	var github = data.children(".projectgithub").text();	
+
+	// Fill in data. 
+	$("#popupinner").children(".title").text(title);
+	$("#popuppiccontainer").children(".absolutecenter").attr("src", image);
+	$("#popupcontent").children(".absolutecenter").text(description);
+	$("#popuplink").children("a").text(link);
+	$("#popuplink").children("a").attr("href", "http://" + link);
+	$("#popupgithub").children("a").attr("href", github);
+
+	// Display data.
+	$("#popupbackground").fadeIn("slow", function() {});
+}
+
+function close_popup() {
+	$("#popupbackground").fadeOut('slow', function(){});
+}

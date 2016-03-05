@@ -29,7 +29,6 @@
 }
 
 .displaycelltitle {
-	/*border: 1px solid orange;*/
 	padding: 5px;
 	margin-top: 20px;
 	text-align: center;
@@ -54,3 +53,9 @@
 	width: 180px;
 	height: auto;
 }
+
+.smallcells .displaycell {
+	height: 200px;
+	cursor: pointer;
+}
+
