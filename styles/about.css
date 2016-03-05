@@ -1,0 +1,61 @@
+.displaycelllist {
+	width: 100%;
+	/*border: 1px solid black;*/
+	box-sizing: border-box;
+	padding: 0;
+	display: table;
+	height: auto;
+}
+
+.displaycelllist li {
+	width: 230px;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	display: table-cell;
+	padding: 0;
+	height: 100%;
+	vertical-align: top;
+	text-align: center;
+}
+
+.displaycell {
+	border: 3px solid black;
+	padding: 10px;
+	width: 200px;
+	height: 350px;
+	margin: 0 auto;
+
+}
+
+.displaycelltitle {
+	padding: 5px;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold; /* Maybe*/
+}
+
+.displaycellbody {
+	/*border: 1px solid grey;*/
+	padding: 5px;
+	margin-top: 20px;
+}
+
+.displaycellicon {
+	/*border: 1px solid green;*/
+	padding: 5px;
+	height: 100px;
+	position: relative;
+}
+
+.displaycellicon img {
+	width: 180px;
+	height: auto;
+}
+
+.smallcells .displaycell {
+	height: 200px;
+	cursor: pointer;
+}
+

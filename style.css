@@ -2,10 +2,26 @@ html {
 	height: 100%;
 }
 
+li {
+	list-style-type: none;
+	display: inline-block;
+}
+
 body {
 	height: 100%;
 	margin: 0;
 	background-color: #F0EAD6;
+	font-family: 'Pontano Sans', sans-serif;
+}
+
+#topcardcontainer {
+	width: 100%;
+	height: 400px;
+	margin: 0;
+	box-sizing: border-box;
+	/*background-color: #F0EAD6;	*/
+	position: relative;
+	padding-top: calc(3% + 30px); /* This must be equal to degree skew. */
 }
 
 .fullscreencard {
@@ -14,84 +30,78 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	background-color: #F0EAD6;
-	border-top: 5px solid black;
+	border-top: 2px solid black;
 
 	padding-top: calc(3% + 30px); /* This must be equal to degree skew. */
-	margin-bottom: 3%; /* This must be equal to degree skew. */
-
-	/* Skew effect */
-	-webkit-transform: skewY(3deg);
-    -moz-transform: skewY(3deg);
-    -ms-transform: skewY(3deg);
-    -o-transform: skewY(3deg);
-    transform: skewY(3deg);
 }
 
 .fullscreencardcontainer {
-	/* Counter skew from outer container*/
 	height: 100%;
 	width: 100%;
+	box-sizing: border-box;
 	padding-top: 3%;
-    -webkit-transform: skewY(-3deg);
-    -moz-transform: skewY(-3deg);
-    -ms-transform: skewY(-3deg);
-    -o-transform: skewY(-3deg);
-    transform: skewY(-3deg);
-    font-size: 0;
+    /*font-size: 0;*/
 }
 
-#rodneypic {
+.innercard {
+	padding-left: 100px;
+	padding-right: 100px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#rodneypiccontainer {
+	width: 40%;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+
+}
+#rodneypiccontainer img {
 	width: 300px;
-	height: 300px;	
-	position: absolute;
-	top: calc(50% - 150px);
-	left: calc(50% - 150px);
+	height: 300px;		
 }
 
-#myname {
-	font-size: 50px;
-	position: absolute;
-	top: 20%;
+.back {
+	background-color: #81BEF7;
+}
+
+#introcontainer {
+	height: 100%;
+	display: inline-block;
+	float: right;
+}
+
+#intro {
+	font-size: 50px;	
+	float: right;
+	position: relative;
+	/*margin: auto 0 auto auto;*/
+	/*margin: 20px auto;*/
+	text-align: center;
+}
+
+#mynamecontainer {
+	width: 30%;
+	height: 100%;
+	position: relative;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 2em;
+	z-index: 2;
+	background-color: black;
+}
+
+#mynamecontainer div {
 	width: 100%;
 	text-align: center;
 }
 
-#navbar {
-	height: 80px;
-	background-color: black;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	box-sizing: border-box;
-	/*border-bottom: 2px solid grey;*/
-	z-index: 1;
-}
 
-#navbar ul {
-	width: 70%;
-	right: 0;
-	/*background-color: green;*/
-	height: 100%;
-	margin: auto 0 auto auto;
-	padding:0;
-	font-size: 0;
-}
-
-#navbar li {
-	list-style-type: none;
-	display: inline-block;
-	position: relative;
-	color: white;
-	box-sizing: border-box;
-	width: 20%;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	background-color: grey;	
-	font-size: 20px;
-	border: 1px solid black;
-}
 
 .white {
 	background-color: white;
@@ -101,7 +111,12 @@ body {
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
+}
 
+.verticalcenter {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
 }
 
 .majoritycontainer {
@@ -121,10 +136,33 @@ body {
 	height: 100%;
 }
 
-.skew-neg {
-
+/* TODO BODY FOR EACH SECTION*/
+.title {
+	margin-bottom: 80px;
 }
 
-.skew-pos {
 
+
+@media (max-width: 1100px) {
+	#rodneypiccontainer {
+		display: none;
+	}
+
+	#introcontainer {
+		width: 100%;
+		text-align: center;
+	}
+
+	#intro {
+		width: 100%;
+		position: absolute;
+	}
+
+	/* This may need to be on smaller devices only */
+	.innercard {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
+
+

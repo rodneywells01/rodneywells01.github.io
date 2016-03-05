@@ -1,5 +1,5 @@
 {
-  "name": "new rodneywells.com",
+  "name": "portfoliowebsite",
   "description": "This is my new portfolio website bowerjson file",
   "main": "",
   "moduleType": [],
@@ -9,7 +9,11 @@
   "license": "MIT",
   "homepage": "www.rodneywells.com",
   "dependencies": {
-    "jquery": "~2.2.0",
-    "polymer": "Polymer/polymer#1.2.0"
+    "Matter": "matter-js#~0.9.1",
+    "polymer": "Polymer/polymer#1.2.0",
+    "google-map": "GoogleWebComponents/google-map#~1.1.10"
+  },
+  "resolutions": {
+    "polymer": "^1.2.3"
   }
 }

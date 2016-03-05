@@ -2,55 +2,396 @@
 <html>
 <head>
 	<title>Rodney Wells Official Website</title>
+
+	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="collage.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Raleway|Pontano+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="bower_components/hover/css/hover.css">
+	<link rel="stylesheet" type="text/css" href="styles/about.css">
+	<link rel="stylesheet" type="text/css" href="styles/header.css">
+	<link rel="stylesheet" type="text/css" href="styles/contact.css">
+	<link rel="stylesheet" type="text/css" href="styles/experience.css">
+	<!-- Scripts -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="attempt.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="bower_components/Matter/build/matter.min.js"></script>
+	<!-- <script type="text/javascript" src="matter_physics.js"></script> -->
+	<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+	<!-- Polymer Imports -->
+	<link rel="import" href="bower_components/google-map/google-map.html">
+	<link rel="import" href="bower_components/google-map/google-map-marker.html">
+	<link rel="import" href="bower_components/google-map/google-map-poly.html">
+	<link rel="import" href="bower_components/google-map/google-map-directions.html">
+
+	<!-- Polymer libraries -->
+	<link rel="import" href="bower_components/polymer/polymer.html">
 </head>
 <body>
 	<div id="navbar">
+		<div id="navbarhighlight"></div>
+		<div id="mynamecontainer"><div class="absolutecenter">Rodney Wells</div></div>
 		<ul>
-			<li class="navbutton"><div class="absolutecenter">About</div></li>
-			<li class="navbutton"><div class="absolutecenter">Projects</div></li>
-			<li class="navbutton"><div class="absolutecenter">Experience</div></li>
-			<li class="navbutton"><div class="absolutecenter">Skills</div></li>
-			<li class="navbutton"><div class="absolutecenter">Contact</div></li>
+			<li class="hvr-underline-from-center navbutton" onclick="scrollToAnchor('about')"><div class="absolutecenter">About</div></li>
+			<li class="hvr-underline-from-center navbutton" onclick="scrollToAnchor('projects')"><div class="absolutecenter">Projects</div></li>
+			<li class="hvr-underline-from-center navbutton" onclick="scrollToAnchor('experience')"><div class="absolutecenter">Experience</div></li>
+			<li class="hvr-underline-from-center navbutton" onclick="scrollToAnchor('skills')"><div class="absolutecenter">Skills</div></li>
+			<li class="hvr-underline-from-center navbutton" onclick="scrollToAnchor('contact')"><div class="absolutecenter">Contact</div></li>
 		</ul>
 	</div>
-	<div class="fullscreencard" style="padding-top: 0;">
-		<div class="fullscreencardcontainer" style="padding-top: 74px;">
-			<div class="majoritycontainer" style="height: 106%;">
-				<div id="myname">Rodney Wells</div>
+	<div id="navbarbuffer"></div>
+	<div id="topcardcontainer" class="back" style="padding-top: 0;">
+		<div class="innercard">
+			<div id="introcontainer"><div id="intro" class="absolutecenter">My Name Is <br/> Rodney Wells. <br/> I Try To Build Cool Stuff!</div></div>			
+			<div id="rodneypiccontainer"><img src="rodneypicture.png" id="rodneypic" class="absolutecenter"/></div>	
+		</div>		
+	</div>
+	
+	<!-- About Page -->
+	<a name="about"/>
+	<div class="fullscreencard white">
+		<div class="fullscreencardcontainer">
+			<div class="innercard">
+				<div class="title"><h1>What's Your Deal, Anyways?</h1></div>
+				<div class="fullscreencardbody">
+					<ul class="displaycelllist">
+						<li><div class="displaycell hvr-fade">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="skills/pennstatenewnofill.png" style="width: 100px; height: 100px;">
+							</div>
+							<div class="displaycelltitle">Pursuing Penn State Degree</div>
+							<div class="displaycellbody">5th Semester Computer Science Student, with a 3.64 GPA.</div>
+						</div></li>
+						<li><div class="displaycell hvr-fade">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="skills/computersciencelogonofill.png">
+							</div>
+							<div class="displaycelltitle">Computer Scientist</div>
+							<div class="displaycellbody">Lots of experience with C++, C#, and Java development, with an Algorithmic mindset and an (attempted!) deep understanding of the inner workings of Computers.</div>
+						</div></li>
+						<li><div class="displaycell hvr-fade">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="skills/html5.png" style="width: 100px; height: 100px;"></div>
+							<div class="displaycelltitle">Web Development Experience</div>
+							<div class="displaycellbody">Core web technologies, backend work (C# PHP, SQL). Co-op Experience at an automation firm with web application focus.</div>
+						</div></li>
+						<li><div class="displaycell hvr-fade">
+							<div class="displaycellicon">
+								<img class="absolutecenter" style="width: 100px; height: 100px;" src="skills/runninglogo.png">
+							</div>
+							<div class="displaycelltitle">Runner</div>
+							<div class="displaycellbody">I love to run! <br/> 5k PR - 21:35 <br/> 10k PR - 52:55</div>
+						</div></li>
+					</ul>
+				</div>
+			</div>			
+		</div>		
+	</div>
 
-				<img src="rodneypicture.png" id="rodneypic"/>
-			</div>	 
-			<div class="minoritycontainer" style="height: 106%; background-color: aliceblue; position: absolute;">
-				<div class="collageblock full left"><div class="collageinner absolutecenter"><h2>At A Glance</h2></div></div>
-				<div class="collageblock wide left"><div class="collageinner absolutecenter">3 Years of Development Education</div></div>
-				<div class="collageblock thin right"><div class="collageinner absolutecenter">Pursuing Degree</div></div>
-				<div class="collageblock half left"><div class="collageinner absolutecenter">Web Dev Experience</div></div>
-				<div class="collageblock half right"><div class="collageinner absolutecenter">Game Development Experience</div></div>
-				<div class="collageblock thin left"><div class="collageinner absolutecenter">Gamer</div></div>
-				<div class="collageblock wide right"><div class="collageinner absolutecenter">Avid Runner</div></div>
-				<div class="collageblock wide"><div class="collageinner absolutecenter">Algorithmic Comprehension</div></div>
-				<div class="collageblock thin"><div class="collageinner absolutecenter">Racquetball Player</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Politically Aware</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Fun</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Gamer</div></div>
-				<div class="collageblock half"><div class="collageinner absolutecenter">Gamer</div></div>
+	<!-- Projects -->
+	<a name="projects"/>
+	<div class="fullscreencard white">
+		<div class="fullscreencardcontainer">
+			<div class="innercard">
+				<div class="title"><h1>Check Out What I've Been Up To</h1></div>
+				<div class="fullscreencardbody">	
+					<ul class="displaycelllist smallcells">
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj1');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" src="skills/nickcoloreditoptimized4.png" style="width: 120px; height: 120px;">
+								</div>
+								<div class="displaycelltitle">NicholasNasibyan.com</div>
+								
+							</div></li>
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj2');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" src="projects/javapaint.png">
+								</div>
+								<div class="displaycelltitle">Java Paint Application</div>
+							</div></li>
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj3');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" src="projects/javaim.png" style="width: 100px; height: 100px;"></div>
+								<div class="displaycelltitle">Java IM Messenger</div>
+							</div></li>
+							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj4');">
+								<div class="displaycellicon">
+									<img class="absolutecenter" style="width: 170px; height: 100px;" src="projects/marblerun.png">
+								</div>
+								<div class="displaycelltitle">Marble Run</div>
+								
+							</div></li>
+					</ul>
+					<ul class="displaycelllist smallcells">
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj5');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="projects/winterwonderland.png" style="width: 170px; height: 100px;">
+							</div>
+							<div class="displaycelltitle">Unity Technical Demonstration - WinterWonderland</div>
+							
+						</div></li>
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj6');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="projects/consolesolitaire.png" style="width: 120px; height: 120px;">
+							</div>
+							<div class="displaycelltitle">C++ Console Solitaire</div>
+						</div></li>
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj7');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" src="rodneypicture.png" style="width: 100px; height: 100px;"></div>
+							<div class="displaycelltitle">RodneyWells.com</div>							
+						</div></li>
+						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj8');">
+							<div class="displaycellicon">
+								<img class="absolutecenter" style="width: 200px; height: 100px;" src="skills/github.png">
+							</div>
+							<div class="displaycelltitle">...and much, much more!</div>
+							
+						</div></li>
+					</ul>			
+				</div>
+			</div>			
+		</div>		
+	</div>
 
 
+	<!-- Experiences -->
+	<a name="experience"/>
+	<div class="fullscreencard white">
+		<div class="fullscreencardcontainer">
+			<div class="innercard">
+				<div class="title"><h1>Previous Experiences</h1></div>
+				<div class="fullscreencardbody">	
+					<div class="displaycell widecard hvr-fade">
+						<div class="title">Penn State University - Teachers Assistant CMPSC 122</div>
+						<div class="contentwrap">
+							<div class="experienceimagewrap">
+								<img class="absolutecenter" src="skills/pennstatenewnofill.png" style="width: 100px; height: 100px;">
+							</div>
+							<div class="experiencedescription">
+								<div class="absolutecenter">Teachers assistant for an introductory Object Oriented design course. Worked with students to teach fundamental OOP concepts and applications, such as linked lists and trees, in C++. Graded weekly homework labs.</div>
+							</div>
+						</div>
+					</div>
+					<div class="displaycell widecard hvr-fade">
+						<div class="title">Software Developer Co-op - Rovisys Automation and Information Solutions</div>
+						<div class="contentwrap">
+							<div class="experienceimagewrap">
+								<img class="absolutecenter" src="experience/rovisys_logo.png" style="width: 170px; height: 60px;">
+							</div>
+							<div class="experiencedescription">
+								<div class="absolutecenter">Co-op with the Rovisys as a Software Developer. Developed interal web applications with modern technologies and frameworks, such as SASS, ASP.net, and AngularJS. Helped to research and implement a central login server implementation of IdentityServer v3. Used the version control system Team Foundation Server to document my work.</div>
+							</div>
+						</div>
+					</div>
+					<div class="displaycell widecard hvr-fade">
+						<div class="title">???</div>
+						<div class="contentwrap">
+							<div class="experienceimagewrap">
+								<img class="absolutecenter" src="experience/pirate.jpg" style="width: 100px; height: 100px;">
+							</div>
+							<div class="experiencedescription">
+								<div class="absolutecenter">Who knows where my next adventure will be? Pirateering in the Carribean? Outerspace exploration with NASA? 
+								<br/> <br/>
+								...or perhaps I'll stick with Software Engineering. And it could be with your company! Contact me below!</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>		
+	</div>
+
+	<!-- Skills -->
+	<a name="skills"/>
+	<div class="fullscreencard white">
+		<div class="fullscreencardcontainer">
+			<div class="innercard">
+				<div class="title"><h1>What Do You (Think!) You Can Do Well?</h1></div>
+				<div class="fullscreencardbody">				
+				</div>
+			</div>			
+		</div>		
+	</div>
+
+	<!-- Contact Page -->
+	<a name="contact"/>
+	<div class="fullscreencard back">
+		<div class="fullscreencardcontainer ">
+			<div class="innercard">
+				<div class="title"><h1>Let's Get in Contact</h1></div>
+				<div class="fullscreencardbody">
+					<div id="mapcontainer">
+						<style>
+						  google-map {
+						    height: 500px;
+						  }
+						</style>
+						<google-map latitude="42.129224" longitude="-80.085059">
+							<google-map-marker latitude="42.129224" longitude="-80.085059"
+	                     title="My Hometown!" draggable="false"/>
+						</google-map>
+					</div>
+					<div id="contactcontainer">
+						<ul>
+							<li>
+								<div class="contactrow">
+									<div class="contacticon">
+										<img src="contacticons/facebookedited.png"></div>
+									<div class="contacttextcontainer">
+										<div class="verticalcenter">LinkedIn</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contactrow">
+									<div class="contacticon">
+										<img src="contacticons/facebookedited.png"></div>
+									<div class="contacttextcontainer">
+										<div class="verticalcenter">GitHub</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contactrow">
+									<div class="contacticon">
+										<img src="contacticons/facebookedited.png"></div>
+									<div class="contacttextcontainer">
+										<div class="verticalcenter">Facebook</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contactrow">
+									<div class="contacticon">
+										<img src="contacticons/facebookedited.png"></div>
+									<div class="contacttextcontainer">
+										<div class="verticalcenter">Twitter</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contactrow">
+									<div class="contacticon">
+										<img src="contacticons/facebookedited.png"></div>
+									<div class="contacttextcontainer">
+										<div class="verticalcenter">rodneywells01@gmail.com</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contactrow">
+									<div class="contacticon">
+										<img src="contacticons/facebookedited.png"></div>
+									<div class="contacttextcontainer">
+										<div class="verticalcenter">Resume Download</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				<div id="finalnote">
+					This website was created by Rodney Wells. Bower, Google Polymer, Jquery, MatterJS, Hover.css. March 2016.
+				</div>	
 			</div>
 		</div>
 	</div>
-	
-	<div class="fullscreencard white">
-		<div class="fullscreencardcontainer">
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	</a>
 
-
+	<!-- Popup for various data -->
+	<div id="popupbackground">
+		<div id="popupinnercontainer">
+			<div id="popupclose" onclick="close_popup();">
+				<div class="hvr-fade"><div class="absolutecenter">X</div></div>	
+			</div>
+			<div id="popupinner">
+				<div class="title">The New NicholasNasibyan.com</div>
+				<div id="popupinnerbody">
+					<div id="popuppiccontainer">
+						<img class="absolutecenter" src="skills/nicholasnasibyanloggedout.png">
+					</div>
+					<div id="popupcontentcontainer">
+						<div id="popupcontent">
+							<div class="absolutecenter">Here's my description of what i've done!</div>
+						</div>
+						<div id="popupcontentlinkcontainer">
+							<div id="popuplink"><a href="http://www.nicholasnasibyan.com">www.nicholasnasibyan.com</div>
+							<div id="popupgithub">
+								<a href="https://github.com/rodneywells01">
+									<img style="width: 100px; height: 100px;" src="skills/github.png">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>		
 	</div>
+
+	<!-- Hidden package deployment for project popups -->
+	<div style="display: none;">
+		<div id="proj1">
+			<div class="projecttitle">The New NicholasNasibyan.com</div>
+			<div class="projectdescription">Working directly with a client to create their vision was an experience that taught me a lot about web development. NicholasNasibyan.com is a product of a joint effort between myself and Nicholas Nasibyan of Erie, Pennsylvania, an up and coming professional pianist. Nick and I scraped various versions of the website, rolling back features and tweaking styles until we had the perfect final product. The website features a dynamic backend written in PHP with a login system the Nicholas can use to log in and edit his website in the browser, with a simple and user-friendly interface. The site also features an email system that allows Nicholas's fans to get in touch with him. 
+			</div>
+			<div class="projectimage">skills/nicholasnasibyanloggedout.png</div>
+			<div class="projectlink">www.nicholasnasibyan.com</div>
+			<div class="projectgithub">https://github.com/rodneywells01/NickWeb</div>
+		</div>
+		<div id="proj2">
+			<div class="projecttitle">Java PaintApplication</div>
+			<div class="projectdescription">A "Microsoft Paint" style appliction, which you can use to draw various shapes, as well as free draw, textures, and patterns. You can even save your work to your computer, or print it to a local printer to share with your friends!</div>
+			<div class="projectimage">projects/javapaint.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj3">
+			<div class="projecttitle">Java IM Application</div>
+			<div class="projectdescription">An asnynchronous Java application. Launch the server, and share the client file with your friends to chat!</div>
+			<div class="projectimage">projects/javaim.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj4">
+			<div class="projecttitle">Marble Run</div>
+			<div class="projectdescription">A game that I developed in Unity for a Game Development Final Project. Marble run uses the Unity Physics engine to create a fully featured marble rolling adventure. The game even has a reasonable difficulty curve, sound and visual effects, as well scaling game mechanics that culminate in an all inclusive final level.</div>
+			<div class="projectimage">projects/marblerun.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj5">
+			<div class="projecttitle">Unity Technical Demonstration - Winter Wonderland</div>
+			<div class="projectdescription">A small, playable demo of a man living inside of a snowy mountaintop. It was my goal to make this scene as aesthetically pleasing as possible, with particle effects and texturing that create a realistic, snowy environment.</div>
+			<div class="projectimage">projects/winterwonderland.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj6">
+			<div class="projecttitle">Solitaire - In the Console!</div>
+			<div class="projectdescription">This is one of my first projects, from Freshman year. A fully functioning and winnable version of Solitaire, entirely in the console. The program has a "gui" in the console, and even has a rudimentary help system for players to learn the game.</div>
+			<div class="projectimage">projects/consolesolitaire.png</div>
+			<div class="projectlink">N/A</div>
+			<div class="projectgithub">N/A</div>
+		</div>
+		<div id="proj7">
+			<div class="projecttitle">RodneyWells.com</div>
+			<div class="projectdescription">If you're reading this text, then you're looking at this project right now! This is the second version of my portfolio website, built using Jquery, Hover.css, bower, and Google Polymer.</div>
+			<div class="projectimage">N/A</div>
+			<div class="projectlink">www.rodneywells.com</div>
+			<div class="projectgithub">https://github.com/rodneywells01/My-Portfolio-Website</div>
+		</div>
+		<div id="proj8">
+			<div class="projecttitle">Check out my GitHub!</div>
+			<div class="projectdescription">I have a few other various projects on GitHub, so feel free to check out what i've been up to at the link below!</div>
+			<div class="projectimage">N/A</div>
+			<div class="projectlink">github.com/rodneywells01</div>
+			<div class="projectgithub">https://github.com/rodneywells01</div>
+		</div>
+	</div>
+
 </body>
 </html>
