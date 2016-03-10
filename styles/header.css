@@ -1,3 +1,19 @@
+html {
+	height: 100%;
+}
+
+li {
+	/*list-style-type: none;*/
+	display: inline-block;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-color: #F0EAD6;
+	font-family: 'Pontano Sans', sans-serif;
+}
+
 #navbarbuffer {
 	height: 60px;
 	display: block;
@@ -60,11 +76,11 @@
 	display: none;
 	width: 100%;
 	height: 100%;	
-	background:rgba(0,0,0,.8);
+	background:rgba(0,0,0,.5);
 	position: fixed;
 	top: 0; left: 0;
 	z-index: 1;
-	padding: 100px 5% 100px 5%;
+	padding: 50px 5% 50px 5%;
 	box-sizing: border-box;
 }
 
@@ -124,32 +140,38 @@
 
 #popuppiccontainer {
 	display: inline-block;
-	width: 60%;
+	width: 100%;
 	box-sizing: border-box;
-	height: 100%;
+	height: 60%;
 	/*border: 1px solid green;*/
 	position: relative;	
+	text-align: center;
 }
 
 #popuppiccontainer img {
 	max-width: 100%;
+	max-height: 100%;
 }
 
 #popupcontentcontainer {
 	display: inline-block;
 	box-sizing: border-box;
-	width: 35%;
+	width: 100%;
 	float: right;
-	height: 100%;
+	height: 30%;
+	border-top: 2px solid grey;
+	margin-top: 20px;
 	/*border: 1px solid yellow;*/
 }
 
 #popupcontent {
 	position: relative;
-	height: 70%;
-	/*width: 80%;*/
+	height: 100%;
+	width: 70%;
+	display: inline-block;
+	text-align: justify;
 	box-sizing: border-box;
-	border: 2px solid grey;
+	/*border: 2px solid grey;*/
 	margin-bottom: 20px;
 	/*display: table-cell;*/
 }
@@ -159,22 +181,29 @@
 }
 
 #popupcontentlinkcontainer {
-	width: 100%;
+	width: 29%;
 	box-sizing: border-box;
-	height: 20%;
+	border-left: 1px solid grey;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
 	/*border: 2px solid grey;*/
-	display: table;
+	/*display: table;*/
 }
 
 #popupcontentlinkcontainer div {
-	display: table-cell;
+	/*display: table-cell;*/
 	/*width: 50%;*/
+	width: 100%;
+	height: 50%;
+	box-sizing: border-box;
 	vertical-align: middle;
 	text-align: center;
 }
 
 #popuplink {
-	width: 60%;
+	/*width: 60%;*/
+	position: relative;
 }
 
 #popuplink a {
@@ -184,4 +213,12 @@
 
 #popupgithub {
 	width: 40%;
+}
+
+.backgroundeven {
+	background-color: #D8D8D8;
+}
+
+.backgroundodd {
+	background-color: #FAFAFA;
 }

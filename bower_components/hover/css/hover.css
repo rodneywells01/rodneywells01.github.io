@@ -29,6 +29,7 @@
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  /*box-shadow: 3px 20px 10px #888888;*/
 }
 
 /* Shrink */
@@ -1391,7 +1392,7 @@
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #2098d1;
+  background-color: #81BEF7;
   color: white;
 }
 

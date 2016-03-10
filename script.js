@@ -39,7 +39,7 @@ function update_navbar() {
 
 function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
 }
 
 function display_popup(data) {	
@@ -48,16 +48,26 @@ function display_popup(data) {
 	var title = data.children(".projecttitle").text();
 	var description = data.children(".projectdescription").text();
 	var image = data.children(".projectimage").text();
-	var link = data.children(".projectlink").text();
+	var linktext = data.children(".projectlink").text();
 	var github = data.children(".projectgithub").text();	
+	var link = data.children(".projectlinkactual").text();
+	if (!link) { link = "http://" + linktext } 
 
 	// Fill in data. 
 	$("#popupinner").children(".title").text(title);
-	$("#popuppiccontainer").children(".absolutecenter").attr("src", image);
+	$("#popuppiccontainer").children("img").attr("src", image);
 	$("#popupcontent").children(".absolutecenter").text(description);
-	$("#popuplink").children("a").text(link);
-	$("#popuplink").children("a").attr("href", "http://" + link);
+	$("#popuplink").children("a").text(linktext);
+	$("#popuplink").children("a").attr("href", link);
 	$("#popupgithub").children("a").attr("href", github);
+
+	if (linktext == "N/A") {
+		$("#popupcontentlinkcontainer").css("display", "none");	
+		$("#popupcontent").css("width", "100%");
+	} else {
+		$("#popupcontentlinkcontainer").css("display", "inline-block");		
+		$("#popupcontent").css("width", "70%");
+	}
 
 	// Display data.
 	$("#popupbackground").fadeIn("slow", function() {});

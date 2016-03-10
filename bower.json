@@ -11,7 +11,8 @@
   "dependencies": {
     "Matter": "matter-js#~0.9.1",
     "polymer": "Polymer/polymer#1.2.0",
-    "google-map": "GoogleWebComponents/google-map#~1.1.10"
+    "google-map": "GoogleWebComponents/google-map#~1.1.10",
+    "paper-material": "PolymerElements/paper-material#~1.0.6"
   },
   "resolutions": {
     "polymer": "^1.2.3"

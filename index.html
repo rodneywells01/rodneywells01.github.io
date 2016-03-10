@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/header.css">
 	<link rel="stylesheet" type="text/css" href="styles/contact.css">
 	<link rel="stylesheet" type="text/css" href="styles/experience.css">
+	
 	<!-- Scripts -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="attempt.js"></script>
@@ -25,6 +26,8 @@
 	<link rel="import" href="bower_components/google-map/google-map-marker.html">
 	<link rel="import" href="bower_components/google-map/google-map-poly.html">
 	<link rel="import" href="bower_components/google-map/google-map-directions.html">
+
+	<link rel="import" href="bower_components/paper-material/paper-material.html">
 
 	<!-- Polymer libraries -->
 	<link rel="import" href="bower_components/polymer/polymer.html">
@@ -50,40 +53,40 @@
 	</div>
 	
 	<!-- About Page -->
-	<a name="about"/>
-	<div class="fullscreencard white">
+	<a name="about"></a>
+	<div class="fullscreencard backgroundodd">
 		<div class="fullscreencardcontainer">
 			<div class="innercard">
 				<div class="title"><h1>What's Your Deal, Anyways?</h1></div>
 				<div class="fullscreencardbody">
 					<ul class="displaycelllist">
-						<li><div class="displaycell hvr-fade">
+						<li><paper-material elevation="3" class="displaycell hvr-fade">
 							<div class="displaycellicon">
 								<img class="absolutecenter" src="skills/pennstatenewnofill.png" style="width: 100px; height: 100px;">
 							</div>
 							<div class="displaycelltitle">Pursuing Penn State Degree</div>
 							<div class="displaycellbody">5th Semester Computer Science Student, with a 3.64 GPA.</div>
-						</div></li>
-						<li><div class="displaycell hvr-fade">
+						</paper-material></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade">
 							<div class="displaycellicon">
 								<img class="absolutecenter" src="skills/computersciencelogonofill.png">
 							</div>
 							<div class="displaycelltitle">Computer Scientist</div>
 							<div class="displaycellbody">Lots of experience with C++, C#, and Java development, with an Algorithmic mindset and an (attempted!) deep understanding of the inner workings of Computers.</div>
-						</div></li>
-						<li><div class="displaycell hvr-fade">
+						</paper-material></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade">
 							<div class="displaycellicon">
 								<img class="absolutecenter" src="skills/html5.png" style="width: 100px; height: 100px;"></div>
 							<div class="displaycelltitle">Web Development Experience</div>
 							<div class="displaycellbody">Core web technologies, backend work (C# PHP, SQL). Co-op Experience at an automation firm with web application focus.</div>
-						</div></li>
-						<li><div class="displaycell hvr-fade">
+						</paper-material></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade">
 							<div class="displaycellicon">
 								<img class="absolutecenter" style="width: 100px; height: 100px;" src="skills/runninglogo.png">
 							</div>
 							<div class="displaycelltitle">Runner</div>
-							<div class="displaycellbody">I love to run! <br/> 5k PR - 21:35 <br/> 10k PR - 52:55</div>
-						</div></li>
+							<div class="displaycellbody">I love to run!<br/> 5k PR - 21:35 <br/> 10k PR - 52:55</div>
+						</paper-material></li>
 					</ul>
 				</div>
 			</div>			
@@ -91,65 +94,64 @@
 	</div>
 
 	<!-- Projects -->
-	<a name="projects"/>
-	<div class="fullscreencard white">
+	<a name="projects"></a>
+	<div class="fullscreencard backgroundeven">
 		<div class="fullscreencardcontainer">
 			<div class="innercard">
 				<div class="title"><h1>Check Out What I've Been Up To</h1></div>
 				<div class="fullscreencardbody">	
-					<ul class="displaycelllist smallcells">
-							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj1');">
+					<ul class="displaycelllist smallcells selectable">
+							<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj1');">
 								<div class="displaycellicon">
 									<img class="absolutecenter" src="skills/nickcoloreditoptimized4.png" style="width: 120px; height: 120px;">
 								</div>
-								<div class="displaycelltitle">NicholasNasibyan.com</div>
-								
-							</div></li>
-							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj2');">
+								<div class="displaycelltitle">NicholasNasibyan.com</div>		
+							</div></paper-material></div></li>
+							<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj2');">
 								<div class="displaycellicon">
 									<img class="absolutecenter" src="projects/javapaint.png">
 								</div>
 								<div class="displaycelltitle">Java Paint Application</div>
-							</div></li>
-							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj3');">
+							</div></paper-material></div></li>
+							<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj3');">
 								<div class="displaycellicon">
 									<img class="absolutecenter" src="projects/javaim.png" style="width: 100px; height: 100px;"></div>
 								<div class="displaycelltitle">Java IM Messenger</div>
-							</div></li>
-							<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj4');">
+							</div></paper-material></div></li>
+							<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj4');">
 								<div class="displaycellicon">
 									<img class="absolutecenter" style="width: 170px; height: 100px;" src="projects/marblerun.png">
 								</div>
-								<div class="displaycelltitle">Marble Run</div>
+								<div class="displaycelltitle">Unity Game - Marble Run</div>
 								
-							</div></li>
+							</div></paper-material></div></li>
 					</ul>
-					<ul class="displaycelllist smallcells">
-						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj5');">
+					<ul class="displaycelllist smallcells selectable">
+						<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj5');">
 							<div class="displaycellicon">
 								<img class="absolutecenter" src="projects/winterwonderland.png" style="width: 170px; height: 100px;">
 							</div>
-							<div class="displaycelltitle">Unity Technical Demonstration - WinterWonderland</div>
+							<div class="displaycelltitle">Unity Demo - WinterWonderland</div>
 							
-						</div></li>
-						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj6');">
+						</div></paper-material></div></li>
+						<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj6');">
 							<div class="displaycellicon">
 								<img class="absolutecenter" src="projects/consolesolitaire.png" style="width: 120px; height: 120px;">
 							</div>
 							<div class="displaycelltitle">C++ Console Solitaire</div>
-						</div></li>
-						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj7');">
+						</div></paper-material></div></li>
+						<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj7');">
 							<div class="displaycellicon">
 								<img class="absolutecenter" src="rodneypicture.png" style="width: 100px; height: 100px;"></div>
 							<div class="displaycelltitle">RodneyWells.com</div>							
-						</div></li>
-						<li><div class="displaycell hvr-fade hvr-buzz" onclick="display_popup('proj8');">
+						</div></paper-material></div></li>
+						<li><div class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade" onclick="display_popup('proj8');">
 							<div class="displaycellicon">
 								<img class="absolutecenter" style="width: 200px; height: 100px;" src="skills/github.png">
 							</div>
 							<div class="displaycelltitle">...and much, much more!</div>
 							
-						</div></li>
+						</div></paper-material></div></li>
 					</ul>			
 				</div>
 			</div>			
@@ -158,149 +160,253 @@
 
 
 	<!-- Experiences -->
-	<a name="experience"/>
-	<div class="fullscreencard white">
+	<a name="experience"></a>
+	<div class="fullscreencard backgroundodd">
 		<div class="fullscreencardcontainer">
 			<div class="innercard">
 				<div class="title"><h1>Previous Experiences</h1></div>
 				<div class="fullscreencardbody">	
-					<div class="displaycell widecard hvr-fade">
-						<div class="title">Penn State University - Teachers Assistant CMPSC 122</div>
-						<div class="contentwrap">
-							<div class="experienceimagewrap">
-								<img class="absolutecenter" src="skills/pennstatenewnofill.png" style="width: 100px; height: 100px;">
+					<ul class="displaycelllist tallcells">
+						<li>
+							<div class="displaycell hvr-fade">
+								<div class="displaycellheader">
+									<div class="displaycelltitle">Penn State University - Teachers Assistant CMPSC 122</div>		
+									<div class="displaycellicon">
+										<img class="absolutecenter" src="skills/pennstatenewnofill.png" style="width: 100px; height: 100px;">
+									</div>
+								</div>
+								
+								<div class="displaycellbody"><div>
+									Teachers assistant for an introductory Object Oriented design course. Worked with students to teach fundamental OOP concepts and applications, such as linked lists and trees, in C++. Graded weekly homework labs.
+								</div>
+									
+								</div>							
 							</div>
-							<div class="experiencedescription">
-								<div class="absolutecenter">Teachers assistant for an introductory Object Oriented design course. Worked with students to teach fundamental OOP concepts and applications, such as linked lists and trees, in C++. Graded weekly homework labs.</div>
+						</li>
+						<li>
+							<div class="displaycell hvr-fade">
+								<div class="displaycellheader">
+									<div class="displaycelltitle">Software Developer Co-op - Rovisys</div>
+									<div class="displaycellicon">
+										<img class="absolutecenter" src="experience/rovisys_logo.png" style="width: 170px; height: 60px;">
+									</div>								
+								</div>
+								<div class="displaycellbody"><div>
+									Co-op with the Rovisys as a Software Developer. Developed interal web applications with modern technologies and frameworks, such as SASS, ASP.net, and AngularJS. Helped to research and implement a central login server implementation of IdentityServer v3. Used the version control system Team Foundation Server to document my work.
+								</div>
+									
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="displaycell widecard hvr-fade">
-						<div class="title">Software Developer Co-op - Rovisys Automation and Information Solutions</div>
-						<div class="contentwrap">
-							<div class="experienceimagewrap">
-								<img class="absolutecenter" src="experience/rovisys_logo.png" style="width: 170px; height: 60px;">
+						</li>
+						<li>
+							<div class="displaycell hvr-fade">
+								<div class="displaycellheader">
+									<div class="displaycelltitle">???</div>
+									<div class="displaycellicon">
+										<img class="absolutecenter" src="experience/pirate.jpg" style="width: 100px; height: 100px;">
+									</div>
+								</div>							
+								<div class="displaycellbody"><div>
+									Who knows where my next adventure will be? Pirateering in the Carribean? Outerspace exploration with NASA? 
+									<br/> <br/>
+									...or perhaps I'll stick with Software Engineering. And it could be with your company! Contact me below!
+								</div>
+									
+								</div>
 							</div>
-							<div class="experiencedescription">
-								<div class="absolutecenter">Co-op with the Rovisys as a Software Developer. Developed interal web applications with modern technologies and frameworks, such as SASS, ASP.net, and AngularJS. Helped to research and implement a central login server implementation of IdentityServer v3. Used the version control system Team Foundation Server to document my work.</div>
-							</div>
-						</div>
-					</div>
-					<div class="displaycell widecard hvr-fade">
-						<div class="title">???</div>
-						<div class="contentwrap">
-							<div class="experienceimagewrap">
-								<img class="absolutecenter" src="experience/pirate.jpg" style="width: 100px; height: 100px;">
-							</div>
-							<div class="experiencedescription">
-								<div class="absolutecenter">Who knows where my next adventure will be? Pirateering in the Carribean? Outerspace exploration with NASA? 
-								<br/> <br/>
-								...or perhaps I'll stick with Software Engineering. And it could be with your company! Contact me below!</div>
-							</div>
-						</div>
-					</div>
+						</li>
+					</ul>													
 				</div>
 			</div>			
 		</div>		
 	</div>
 
 	<!-- Skills -->
-	<a name="skills"/>
-	<div class="fullscreencard white">
+	<a name="skills"></a>
+	<div class="fullscreencard backgroundeven">
 		<div class="fullscreencardcontainer">
 			<div class="innercard">
-				<div class="title"><h1>What Do You (Think!) You Can Do Well?</h1></div>
-				<div class="fullscreencardbody">				
+				<div class="title"><h1>Skills, in Order of Confidence!</h1></div>
+				<div class="fullscreencardbody">
+				<ul class="displaycelllist smallcells">
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" src="skills/csharp.png" style="width: 100px; height: 100px;">
+							</div>							
+						</paper-material></div></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" src="skills/java.png"style="width: 140px; height: 140px;">
+							</div>							
+						</paper-material></div></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" src="skills/cplusplus.png" style="width: 150px; height: 100px;"></div>							
+						</paper-material></div></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" style="width: 100px; height: 100px;" src="skills/javascript.png">
+							</div>							
+						</paper-material></div></li>
+					</ul>	
+					<ul class="displaycelllist smallcells">
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" src="skills/python.png" style="width: 100px; height: 100px;">
+							</div>							
+						</paper-material></div></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" src="skills/php.png">
+							</div>							
+						</paper-material></div></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" src="skills/sql.png" style="width: 200px; height: 100px;"></div>							
+						</paper-material></div></li>
+						<li><paper-material elevation="3" class="displaycell hvr-fade"><div class="absolutecenter">
+							<div class="displaycellicon" style="margin: 0;">
+								<img class="absolutecenter" style="width: 100px; height: 100px;" src="skills/C.png">
+							</div>							
+						</paper-material></div></li>
+					</ul>			
 				</div>
 			</div>			
 		</div>		
 	</div>
 
 	<!-- Contact Page -->
-	<a name="contact"/>
-	<div class="fullscreencard back">
-		<div class="fullscreencardcontainer ">
-			<div class="innercard">
+	<a name="contact"></a>
+	<div class="fullscreencard back" >
+		<div class="fullscreencardcontainer " style="padding-top: 0">
+			<div id="mapcontainer">			
+				<google-map latitude="42.129224" longitude="-80.085059" disable-zoom disable-default-ui zoom="10">
+					<google-map-marker latitude="42.129224" longitude="-80.085059"
+	             title="My Hometown!" draggable="false" /></google-map-marker>
+				</google-map>
+			</div>
+			<div class="innercard" style="height: 60%;">
 				<div class="title"><h1>Let's Get in Contact</h1></div>
 				<div class="fullscreencardbody">
-					<div id="mapcontainer">
-						<style>
-						  google-map {
-						    height: 500px;
-						  }
-						</style>
-						<google-map latitude="42.129224" longitude="-80.085059">
-							<google-map-marker latitude="42.129224" longitude="-80.085059"
-	                     title="My Hometown!" draggable="false"/>
-						</google-map>
-					</div>
 					<div id="contactcontainer">
-						<ul>
-							<li>
-								<div class="contactrow">
-									<div class="contacticon">
-										<img src="contacticons/facebookedited.png"></div>
-									<div class="contacttextcontainer">
-										<div class="verticalcenter">LinkedIn</div>
-									</div>
-								</div>
+						<ul class="displaycelllist verysmallcells selectable">
+							<li>	
+								<a target="_blank" href="https://www.linkedin.com/in/rodneywells">
+								<div class="hvr-grow">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="contacticons/linkedinedited.png"/>
+											</div>	
+										<div class="contacttextcontainer">
+											<div class="balls">LinkedIn</div>
+										</div>
+										</div>
+									</paper-material>
+								</div>	
+								</a>							
 							</li>
 							<li>
-								<div class="contactrow">
-									<div class="contacticon">
-										<img src="contacticons/facebookedited.png"></div>
-									<div class="contacttextcontainer">
-										<div class="verticalcenter">GitHub</div>
-									</div>
-								</div>
+								<a target="_blank" href="https://github.com/rodneywells01">
+								<div class="hvr-grow">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="projects/githubblue.png"/>
+											</div>	
+											<div class="contacttextcontainer">
+												<div class="balls">GitHub</div>
+											</div>
+										</div>
+									</paper-material>
+								</div>			
+								</a>												
+							</li>
+							<li>	
+								<a target="_blank" href="https://www.facebook.com/rodney.wells.73">
+								<div class="hvr-grow">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="contacticons/facebookedited.png"/>
+											</div>	
+											<div class="contacttextcontainer">
+												<div class="balls">Facebook</div>
+											</div>
+										</div>
+									</paper-material>
+								</div>		
+								</a>						
+							</li>
+							<li>	
+								<a target="_blank" href="https://twitter.com/RodSquadWells">
+								<div class="hvr-grow">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="contacticons/twitteredited.png"/>
+											</div>	
+											<div class="contacttextcontainer">
+												<div class="balls">Twitter</div>
+											</div>
+										</div>
+									</paper-material>
+								</div>								
+								</a>
 							</li>
 							<li>
-								<div class="contactrow">
-									<div class="contacticon">
-										<img src="contacticons/facebookedited.png"></div>
-									<div class="contacttextcontainer">
-										<div class="verticalcenter">Facebook</div>
-									</div>
-								</div>
+								<div class="hvr-grow">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="contacticons/resumeedited2.png"/>
+											</div>	
+											<div class="contacttextcontainer">
+												<div class="balls">rodneywells01 <br/>@gmail.com</div>
+											</div>
+										</div>
+									</paper-material>
+								</div>								
 							</li>
 							<li>
-								<div class="contactrow">
-									<div class="contacticon">
-										<img src="contacticons/facebookedited.png"></div>
-									<div class="contacttextcontainer">
-										<div class="verticalcenter">Twitter</div>
-									</div>
-								</div>
+								<div class="hvr-grow" style="cursor:none;">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="contacticons/skypeedited2.png"/>
+											</div>	
+											<div class="contacttextcontainer">
+												<div class="balls">Skype</div>
+											</div>
+										</div>
+									</paper-material>
+								</div>								
 							</li>
 							<li>
-								<div class="contactrow">
-									<div class="contacticon">
-										<img src="contacticons/facebookedited.png"></div>
-									<div class="contacttextcontainer">
-										<div class="verticalcenter">rodneywells01@gmail.com</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="contactrow">
-									<div class="contacticon">
-										<img src="contacticons/facebookedited.png"></div>
-									<div class="contacttextcontainer">
-										<div class="verticalcenter">Resume Download</div>
-									</div>
-								</div>
+								<div class="hvr-grow">
+									<paper-material elevation="3" class="displaycell hvr-fade">
+										<div class="absolutecenter">
+											<div class="contacticon">	
+												<img src="contacticons/phoneedited2.png"/>
+											</div>	
+											<div class="contacttextcontainer">
+												<div class="balls">814-823-4579</div>
+											</div>
+										</div>
+									</paper-material>
+								</div>								
 							</li>
 						</ul>
-					</div>
-					
+					</div>					
 				</div>
 				<div id="finalnote">
-					This website was created by Rodney Wells. Bower, Google Polymer, Jquery, MatterJS, Hover.css. March 2016.
-				</div>	
+					<div>
+						This website was created by Rodney Wells. Bower, Google Polymer, Jquery, MatterJS, Hover.css. March 2016.
+					</div>	
+				</div>				
 			</div>
 		</div>
-	</div>
-	</a>
+	</div>		
 
 	<!-- Popup for various data -->
 	<div id="popupbackground">
@@ -312,17 +418,17 @@
 				<div class="title">The New NicholasNasibyan.com</div>
 				<div id="popupinnerbody">
 					<div id="popuppiccontainer">
-						<img class="absolutecenter" src="skills/nicholasnasibyanloggedout.png">
+						<img class="" src="skills/nicholasnasibyanloggedout.png">
 					</div>
 					<div id="popupcontentcontainer">
 						<div id="popupcontent">
 							<div class="absolutecenter">Here's my description of what i've done!</div>
 						</div>
 						<div id="popupcontentlinkcontainer">
-							<div id="popuplink"><a href="http://www.nicholasnasibyan.com">www.nicholasnasibyan.com</div>
+							<div id="popuplink"><a class="absolutecenter" href="http://www.nicholasnasibyan.com">www.nicholasnasibyan.com</div>
 							<div id="popupgithub">
 								<a href="https://github.com/rodneywells01">
-									<img style="width: 100px; height: 100px;" src="skills/github.png">
+									<img class="hvr-fade" style="width: 100px; height: 100px;" src="projects/githubblue.png">
 								</a>
 							</div>
 						</div>
@@ -340,6 +446,7 @@
 			</div>
 			<div class="projectimage">skills/nicholasnasibyanloggedout.png</div>
 			<div class="projectlink">www.nicholasnasibyan.com</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">https://github.com/rodneywells01/NickWeb</div>
 		</div>
 		<div id="proj2">
@@ -347,6 +454,7 @@
 			<div class="projectdescription">A "Microsoft Paint" style appliction, which you can use to draw various shapes, as well as free draw, textures, and patterns. You can even save your work to your computer, or print it to a local printer to share with your friends!</div>
 			<div class="projectimage">projects/javapaint.png</div>
 			<div class="projectlink">N/A</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">N/A</div>
 		</div>
 		<div id="proj3">
@@ -354,13 +462,15 @@
 			<div class="projectdescription">An asnynchronous Java application. Launch the server, and share the client file with your friends to chat!</div>
 			<div class="projectimage">projects/javaim.png</div>
 			<div class="projectlink">N/A</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">N/A</div>
 		</div>
 		<div id="proj4">
 			<div class="projecttitle">Marble Run</div>
 			<div class="projectdescription">A game that I developed in Unity for a Game Development Final Project. Marble run uses the Unity Physics engine to create a fully featured marble rolling adventure. The game even has a reasonable difficulty curve, sound and visual effects, as well scaling game mechanics that culminate in an all inclusive final level.</div>
 			<div class="projectimage">projects/marblerun.png</div>
-			<div class="projectlink">N/A</div>
+			<div class="projectlink">Play Now! (IE, Firefox, Safari) </div>
+			<div class="projectlinkactual">unitygames/marblerun.html</div>
 			<div class="projectgithub">N/A</div>
 		</div>
 		<div id="proj5">
@@ -368,6 +478,7 @@
 			<div class="projectdescription">A small, playable demo of a man living inside of a snowy mountaintop. It was my goal to make this scene as aesthetically pleasing as possible, with particle effects and texturing that create a realistic, snowy environment.</div>
 			<div class="projectimage">projects/winterwonderland.png</div>
 			<div class="projectlink">N/A</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">N/A</div>
 		</div>
 		<div id="proj6">
@@ -375,6 +486,7 @@
 			<div class="projectdescription">This is one of my first projects, from Freshman year. A fully functioning and winnable version of Solitaire, entirely in the console. The program has a "gui" in the console, and even has a rudimentary help system for players to learn the game.</div>
 			<div class="projectimage">projects/consolesolitaire.png</div>
 			<div class="projectlink">N/A</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">N/A</div>
 		</div>
 		<div id="proj7">
@@ -382,13 +494,15 @@
 			<div class="projectdescription">If you're reading this text, then you're looking at this project right now! This is the second version of my portfolio website, built using Jquery, Hover.css, bower, and Google Polymer.</div>
 			<div class="projectimage">N/A</div>
 			<div class="projectlink">www.rodneywells.com</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">https://github.com/rodneywells01/My-Portfolio-Website</div>
 		</div>
 		<div id="proj8">
 			<div class="projecttitle">Check out my GitHub!</div>
 			<div class="projectdescription">I have a few other various projects on GitHub, so feel free to check out what i've been up to at the link below!</div>
-			<div class="projectimage">N/A</div>
+			<div class="projectimage">projects/githubblue.png</div>
 			<div class="projectlink">github.com/rodneywells01</div>
+			<div class="projectlinkactual"></div>
 			<div class="projectgithub">https://github.com/rodneywells01</div>
 		</div>
 	</div>
