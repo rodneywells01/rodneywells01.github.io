@@ -1,28 +1,43 @@
+var aboutlistelems, aboutlist;
+var projectlistelems, projectlist;
+var experiencelistelems, experiencelist;
+var skilllistelems, skilllist;
+var contactlistelems, contactlist;
+
 $(document).ready(function() {
-	var collageblocks = $(".collageblock");
+	aboutlist = $("#about");
+	projectlist = $("#projects");
+	experiencelist = $("#experience");
+	skilllist = $("#skills");
+	contactlist = $("#contact");
 
-	var collagecolors = ["aliceblue", "antiquewhite", "cadetblue", "cornsilk", "darkcyan", "darkgoldenrod", "darksalmon", "darkslategrey", "darkseagreen", "forestgreen", "goldenrod", "lightblue", "lightgreen", "lightseagreen", "mediumpurple"];
-
-	$.each(collageblocks, function(index, block) {
-		randnum = Math.floor(Math.random() * collagecolors.length);
-		$(block).css("background-color", collagecolors[randnum]);
-	});
+	aboutlistelems = aboutlist.find(".displaycell");
+	projectlistelems = projectlist.find(".displaycell");
+	experiencelistelems = experiencelist.find(".displaycell");
+	skilllistelems = skilllist.find(".displaycell");
+	contactlistelems = contactlist.find(".displaycell");
 
 	$(window).scroll(function() {
 		update_navbar();
+		display_new_cells();
 	});
 
 	$(window).load(function() {
 		$("#navbarhighlight").fadeIn('fast');
 		update_navbar();
 	});
-	
+
+});
+
+$(window).load(function() {
+	display_new_cells();
 });
 
 
 function update_navbar() {
 	var widthofname = $("#mynamecontainer").width();		
-	var width = document.documentElement.clientWidth - 400 / $(window).height();
+	var width = document.documentElement.clientWidth;
+	
 	
 	// Pixel contribution relativetop 
 	var sizeoftop = $("#navbar").height() + $("#topcardcontainer").height();			
@@ -30,11 +45,28 @@ function update_navbar() {
 	var reltoppixels = relativetop * (width - widthofname);	
 
 
-	var percentage = ($(window).scrollTop() / ($(document).height() - $(window).height()));			
-	var leftpos = widthofname - reltoppixels // 100% right
+	var percentage = ($(window).scrollTop() / ($(document).height() - $(window).height()));				
+	var leftpos = widthofname - reltoppixels // 100% correct
+	+ (2 * (1 - percentage)) // Pixel contribution from left most border shift
 	+ (width - widthofname + reltoppixels - $("#navbarhighlight").width()) * percentage; // Pixel Contribution of percentage 
 	
 	$("#navbarhighlight").css("left", leftpos);
+}
+
+function display_new_cells() {
+	var ypos = window.pageYOffset + window.innerHeight;
+	var offset = window.innerHeight / 2;
+	if (ypos > aboutlist.position().top + offset) { trigger_new_cells(aboutlistelems); }
+	if (ypos > projectlist.position().top + offset) { trigger_new_cells(projectlistelems); }
+	if (ypos > experiencelist.position().top + offset) { trigger_new_cells(experiencelistelems); }
+	if (ypos > skilllist.position().top + offset) { trigger_new_cells(skilllistelems); }
+	if (ypos > contactlist.position().top + offset) { trigger_new_cells(contactlistelems); }
+}
+
+function trigger_new_cells(list) {
+	$.each(list, function(index, item) {
+		$(item).fadeIn("slow", function(){});
+	});
 }
 
 function scrollToAnchor(aid){
@@ -42,7 +74,7 @@ function scrollToAnchor(aid){
     $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
 }
 
-function display_popup(data) {	
+function prepare_popup(data) {	
 	// Fetch data
 	var data = $("#" + data); 
 	var title = data.children(".projecttitle").text();
@@ -68,11 +100,56 @@ function display_popup(data) {
 		$("#popupcontentlinkcontainer").css("display", "inline-block");		
 		$("#popupcontent").css("width", "70%");
 	}
+}
 
-	// Display data.
-	$("#popupbackground").fadeIn("slow", function() {});
+var navsdisplaying = false;
+function pop_menu() {
+	var navbar = $("#navbarlist");
+	if (!navsdisplaying){
+    	navbar.addClass('active').show().css({
+	        left: -(navbar.outerWidth(true))
+	    }).animate({
+	        left: 0
+	    }, 400);
+    } else {
+    	navbar.removeClass('active').animate({
+            left: -(navbar.outerWidth(true))
+        }, 400);
+    }
+ 	navsdisplaying = !navsdisplaying;
 }
 
 function close_popup() {
-	$("#popupbackground").fadeOut('slow', function(){});
+	if (window.innerWidth < 950) {		
+		$("#popupbackground").animate({top: window.innerHeight}, 300); 
+	} else {
+		$("#popupbackground").fadeOut('slow', function(){});	
+	}
+	displayingProject = false;	
+}
+
+
+var displayingProject = false;
+function display_project_details(projectdetails) {
+	if (window.innerWidth < 950) {
+		if (!displayingProject) {
+		// We want to expand content.		
+			prepare_popup(projectdetails);
+			$("#popupbackground").css("top", window.innerHeight);
+			$("#popupbackground").css("display", "block");
+			$("#popupbackground").animate({top: window.innerHeight - $("#popupbackground").height()}, 300);	
+		} else {
+			// Fade Content on div already in place. 
+			$("#popupbackground").children().children().fadeOut('fast', function(){
+				prepare_popup(projectdetails);
+				$("#popupbackground").children().children().fadeIn('fast', function() {});
+			});
+		}			
+	} else if (window.innerWidth >= 950 && !displayingProject) {			
+		// Display data.
+		$("#popupbackground").css("top", 0);
+		prepare_popup(projectdetails);
+		$("#popupbackground").fadeIn("slow", function() {});
+	}
+	displayingProject = true;
 }

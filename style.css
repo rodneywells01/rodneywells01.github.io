@@ -16,7 +16,6 @@
 	margin: 0 auto;
 	display: table-cell;
 	padding: 0;
-	
 	vertical-align: top;
 	text-align: center;
 }
@@ -28,7 +27,7 @@
 	width: 200px;
 	height: 350px;
 	margin: 0 auto;
-	cursor: default;    
+	cursor: default; 
 }
 
 .displaycelltitle {
@@ -177,7 +176,7 @@
 
 /* TODO BODY FOR EACH SECTION*/
 .title {
-	margin-bottom: 80px;
+	margin-bottom: 70px;
 }
 
 .tallcells .displaycell {
@@ -213,28 +212,5 @@ a {
 	height: 200px;
 }
 
-
-
-@media (max-width: 1100px) {
-	#rodneypiccontainer {
-		display: none;
-	}
-
-	#introcontainer {
-		width: 100%;
-		text-align: center;
-	}
-
-	#intro {
-		width: 100%;
-		position: absolute;
-	}
-
-	/* This may need to be on smaller devices only */
-	.innercard {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
 
 
