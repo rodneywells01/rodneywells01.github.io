@@ -1,0 +1,171 @@
+@media screen and (max-device-width: 1100px), screen and (max-width: 1100px) {
+	#rodneypiccontainer {
+		display: none;
+	}
+
+	#introcontainer {
+		width: 100%;
+		text-align: center;
+	}
+
+	#intro {
+		width: 100%;
+		position: absolute;
+	}
+
+	/* This may need to be on smaller devices only */
+	.innercard {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media only screen and (max-device-width: 950px), screen and (max-width: 950px) {
+	#mapcontainer {
+		height: 400px;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.fullscreencard {
+		height: auto;
+	}
+
+	.innercard {
+		padding: 0;
+	}
+	#navbar ul {
+		display: inline-block;	    	   
+	    position: fixed;
+	    left: -200px;
+	    top: 100px;
+	    box-sizing: border-box;
+	    margin: 0;
+	    width: 200px;
+	    height: auto;
+	}
+
+	#navbar li {
+		display: block;
+		width: 200px;
+		height: 100px;
+
+	}
+
+	#navbarhighlight {
+		display: none;
+	}
+
+	#mynamecontainer {
+		width: 100%;
+	}
+
+	#mobilebutton {
+		display: block;
+	    box-sizing: border-box;
+	    cursor: pointer;
+	    font-size: 80px;	    
+	}
+
+	#mobilebutton div {
+		box-sizing: border-box;
+	    height: 100%;
+	}
+	#mobilebutton img {
+		width: 60px;
+	}
+
+	#contactcontainer {
+		margin-bottom: 100px;
+	}
+
+	/* About page */
+	.displaycelllist {
+		text-align: center;
+	}
+
+	.displaycelllist li {
+		display: inline-block;
+		width: 40%;
+		height: 250px;
+	}
+
+	.smallcells .displaycell {
+		width: 100%;
+	}
+
+	.smallcells li .hvr-grow {
+		width: 100%;
+	}
+
+	.smallcells li {
+		width: 30%;
+	}
+
+	.displaycell {
+		width: 80%;
+		height: 200px;
+	}
+
+	.hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+	  -webkit-transform: none;
+	  transform: none;
+	}
+
+	.tallcells li {
+		height: 600px;
+	}
+
+	.tallcells li .displaycell {
+		height: 550px;
+	}
+
+	.nomobile {
+		display: none !important;
+	}
+
+	/* Modal on mobile is a sliding panel */
+	#popupbackground {
+		height: 50%;
+		top: 50%;
+		padding: 0;
+	}
+
+	#popupinnercontainer {
+		max-width: none;
+	}
+
+	#popupinner .title {
+		height: auto;
+	}
+
+	#popupclose {
+		top: 0px;
+		left: calc(100% - 70px);
+		border: 0;
+	}
+
+	#popupcontent {
+		margin-top: 20px;
+	}
+
+	#popuppiccontainer {
+		height: 40%;
+	}
+
+	#popuppiccontainer img {
+		height: 200px;
+	}
+
+	#popupinnerbody {
+		padding-top: 20px;
+	}
+}
+
+
+
+.displaycell {
+	display: none;
+}
