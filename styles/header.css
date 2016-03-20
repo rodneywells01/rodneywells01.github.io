@@ -125,7 +125,7 @@ body {
 	border: 1px solid grey;
 	background:rgba(0,0,0,1);	
 	background-color: #F2F2F2;
-	max-width: 900px;
+	max-width: 800px;
 	/*margin: 0 auto;*/
 	height: auto;
 }
@@ -219,6 +219,7 @@ body {
 
 #popupgithub {
 	width: 40%;
+	margin-top: 20px;
 }
 
 .backgroundeven {

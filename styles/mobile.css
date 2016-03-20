@@ -98,10 +98,13 @@
 
 	.smallcells li .hvr-grow {
 		width: 100%;
+		max-width: 250px;
 	}
 
 	.smallcells li {
-		width: 30%;
+		width: 35%;
+		margin-right: 4%;
+		margin-left: 4%;
 	}
 
 	.displaycell {
@@ -135,6 +138,7 @@
 
 	#popupinnercontainer {
 		max-width: none;
+		padding-top: 70px;
 	}
 
 	#popupinner .title {
@@ -143,8 +147,8 @@
 
 	#popupclose {
 		top: 0px;
+		border: none;
 		left: calc(100% - 70px);
-		border: 0;
 	}
 
 	#popupcontent {
