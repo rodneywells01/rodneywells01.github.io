@@ -5,7 +5,6 @@
 	padding: 0;
 	display: table;
 	height: 100%;
-	font-size: 1.1vw;
 }
 
 .displaycelllist li {
@@ -31,6 +30,7 @@
 	margin: 0 auto;
 	cursor: default;
 	max-height: 430px; 
+	display: block !important;
 }
 
 .displaycelltitle {
@@ -190,7 +190,7 @@
 	height: 100%;
 	width: 70%;
 	max-width: 300px;
-	max-height: none;
+	max-height: 550px;
 }
 
 .tallcells .displaycellbody {	    

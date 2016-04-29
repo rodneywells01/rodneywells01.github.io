@@ -202,7 +202,7 @@ body {
 
 #popupcontentlinkcontainer div {
 	width: 100%;
-	height: 50%;
+	/*height: 50%;*/
 	box-sizing: border-box;
 	vertical-align: middle;
 	text-align: center;
@@ -210,6 +210,7 @@ body {
 
 #popuplink {
 	position: relative;
+	height: 20px;
 }
 
 #popuplink a {
