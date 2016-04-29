@@ -1,4 +1,7 @@
+/* Tablets */
 @media screen and (max-device-width: 1100px), screen and (max-width: 1100px) {
+
+
 	#rodneypiccontainer {
 		display: none;
 	}
@@ -20,6 +23,7 @@
 	}
 }
 
+/* */
 @media only screen and (max-device-width: 950px), screen and (max-width: 950px) {
 	#mapcontainer {
 		height: 400px;
@@ -31,6 +35,7 @@
 
 	.fullscreencard {
 		height: auto;
+		min-height: 100%;
 	}
 
 	.innercard {
@@ -98,10 +103,13 @@
 
 	.smallcells li .hvr-grow {
 		width: 100%;
+		max-width: 250px;
 	}
 
 	.smallcells li {
-		width: 30%;
+		width: 35%;
+		margin-right: 4%;
+		margin-left: 4%;
 	}
 
 	.displaycell {
@@ -135,6 +143,7 @@
 
 	#popupinnercontainer {
 		max-width: none;
+		padding-top: 70px;
 	}
 
 	#popupinner .title {
@@ -143,8 +152,8 @@
 
 	#popupclose {
 		top: 0px;
+		border: none;
 		left: calc(100% - 70px);
-		border: 0;
 	}
 
 	#popupcontent {

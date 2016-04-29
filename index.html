@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="bower_components/Matter/build/matter.min.js"></script>
+
 	<!-- <script type="text/javascript" src="matter_physics.js"></script> -->
 	<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
@@ -25,7 +26,6 @@
 	<link rel="import" href="bower_components/google-map/google-map-marker.html">
 	<link rel="import" href="bower_components/google-map/google-map-poly.html">
 	<link rel="import" href="bower_components/google-map/google-map-directions.html">
-
 	<link rel="import" href="bower_components/paper-material/paper-material.html">
 
 	<!-- Polymer libraries -->
@@ -40,9 +40,7 @@
 			<img src="menubutton.png">
 			</div>
 		</div>
-		<!-- <div id="popupclose">
-			<div class="hvr-fade"><div class="absolutecenter">X</div></div>	
-		</div> -->
+
 		<ul id="navbarlist">
 			<li class="hvr-sweep-to-top" onclick="scrollToAnchor('about')"><div class="absolutecenter">About</div></li>
 			<li class="hvr-sweep-to-top" onclick="scrollToAnchor('projects')"><div class="absolutecenter">Projects</div></li>
@@ -154,7 +152,7 @@
 						</div></paper-material></div></li>
 						<li><div onclick="display_project_details('proj8');" class="hvr-grow"><paper-material elevation="3" animated><div class="displaycell hvr-fade">
 							<div class="displaycellicon">
-								<img class="absolutecenter" style="width: 200px; height: 100px;" src="skills/github.png">
+								<img class="absolutecenter" style="width: 100px; height: 100px;" src="projects/github.png">
 							</div>
 							<div class="displaycelltitle">...and much, much more!</div>
 							
@@ -209,7 +207,7 @@
 								<div class="displaycellheader">
 									<div class="displaycelltitle">???</div>
 									<div class="displaycellicon">
-										<img class="absolutecenter" src="experience/pirate.jpg" style="width: 100px; height: 100px;">
+										<img class="absolutecenter" src="experience/piratenobg.png" style="width: 100px; height: 100px;">
 									</div>
 								</div>							
 								<div class="displaycellbody"><div>
@@ -309,7 +307,8 @@
 											</div>
 										</div>
 									</paper-material>
-								</div>								
+								</div>
+								</a>
 							</li>
 							<li>	
 								<a target="_blank" href="https://www.linkedin.com/in/rodneywells">
@@ -494,15 +493,15 @@
 			<div class="projectimage">projects/marblerun.png</div>
 			<div class="projectlink">Play Now! (IE, Firefox, Safari) </div>
 			<div class="projectlinkactual">unitygames/marblerun.html</div>
-			<div class="projectgithub">N/A</div>
+			<div class="projectgithub">https://github.com/rodneywells01/MarbleRunGameDev250</div>
 		</div>
 		<div id="proj5">
 			<div class="projecttitle">Unity Technical Demonstration - Winter Wonderland</div>
 			<div class="projectdescription">A small, playable demo of a man living inside of a snowy mountaintop. It was my goal to make this scene as aesthetically pleasing as possible, with particle effects and texturing that create a realistic, snowy environment.</div>
 			<div class="projectimage">projects/winterwonderland.png</div>
-			<div class="projectlink">N/A</div>
-			<div class="projectlinkactual"></div>
-			<div class="projectgithub">N/A</div>
+			<div class="projectlink">Play Now! (IE, Firefox, Safari)</div>
+			<div class="projectlinkactual">unitygames/winterwonderland.html</div>
+			<div class="projectgithub">https://github.com/rodneywells01/WinterWonderlandGame250</div>
 		</div>
 		<div id="proj6">
 			<div class="projecttitle">Solitaire - In the Console!</div>
@@ -515,7 +514,7 @@
 		<div id="proj7">
 			<div class="projecttitle">RodneyWells.com</div>
 			<div class="projectdescription">If you're reading this text, then you're looking at this project right now! This is the second version of my portfolio website, built using Jquery, Hover.css, bower, and Google Polymer.</div>
-			<div class="projectimage">N/A</div>
+			<div class="projectimage">projects/portfolio.png</div>
 			<div class="projectlink">www.rodneywells.com</div>
 			<div class="projectlinkactual"></div>
 			<div class="projectgithub">https://github.com/rodneywells01/My-Portfolio-Website</div>

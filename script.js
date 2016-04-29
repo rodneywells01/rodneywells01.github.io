@@ -121,7 +121,7 @@ function pop_menu() {
 
 function close_popup() {
 	if (window.innerWidth < 950) {		
-		$("#popupbackground").animate({top: window.innerHeight}, 300); 
+		$("#popupbackground").animate({top: window.innerHeight + 70}, 300); 
 	} else {
 		$("#popupbackground").fadeOut('slow', function(){});	
 	}
@@ -153,3 +153,5 @@ function display_project_details(projectdetails) {
 	}
 	displayingProject = true;
 }
+
+// 
