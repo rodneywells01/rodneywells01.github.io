@@ -37,13 +37,14 @@
 	padding: 5px;
 	margin-top: 20px;
 	text-align: center;
-	font-size: 20px;
-	font-weight: bold; /* Maybe*/
+	font-size: 120%;
+	font-weight: bold;
 }
 
 .displaycellbody {	
 	padding: 5px;
 	margin-top: 20px;
+	font-size: 80%;
 }
 
 .displaycellicon {	
@@ -70,6 +71,8 @@
 
 .fullscreencard {
 	height: calc(100% - 60px);
+	min-height: 700px;
+	max-height: 1000px;
 	width: 100%;
 	margin: 0;
 	box-sizing: border-box;
@@ -82,12 +85,12 @@
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	padding-top: 100px;
+	padding-top: 50px;
     /*font-size: 0;*/
 }
 
 .fullscreencardbody {
-	height: 7%5;
+	height: 75%;
 }
 
 .innercard {
@@ -199,6 +202,11 @@
     height: 200px;
     display: table-cell;
     vertical-align: middle;
+}
+
+.smallcells li {
+	padding-top: 25px;
+	padding: 20px;
 }
 
 a {

@@ -1,13 +1,18 @@
 /* CONTACT SECTION */
 #mapcontainer {
 	width: 100%;
-	height: 40%;	
+	height: 30%;	
 	/*border: 1px solid black;*/
 	box-sizing: border-box;	
 }
 
+#contact {
+	min-height: 0;
+}
+
 #contactcontainer {	
 	width: 100%;
+	height: 75%;
 	text-align: center;	
 	box-sizing: border-box;
 	position: relative;
@@ -19,10 +24,6 @@
 #contactcontainer li {
 	display: inline-block;
 	font-size: 20px;
-}
-
-#contactcontainer div {
-	display: inline-block;
 }
 
 #contactcontainer ul {
@@ -39,7 +40,7 @@
 	width: 100%;
 }
 .contacttextcontainer {
-	height: 100%;
+	height: 75%;
 	position: relative;
 	vertical-align: top;
 }
@@ -51,18 +52,30 @@
 
 .contacttext {
 	width: 100%;
+	display: block;
+	font-size: 75%;
+}
+
+#contact .title {
+	margin-bottom: 2em;
 }
 
 
 #contactcontainer .verysmallcells .displaycell{
-	height: 100px;
-	width: 150px;
+	height: 90%;
+	width: 90%;
+}
+
+.verysmallcells .hvr-grow {
+	height: 100%;
+	width: 100%;
+
 }
 
 #contactcontainer .verysmallcells li {
 	min-width: auto;
-	height: 120px;
-	width: 200px;
+	height: 50%;
+	/*width: 200px;*/
 	margin: 0 10px 10px 0;
 }
 
